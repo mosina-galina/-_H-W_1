@@ -1,20 +1,24 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
+﻿//Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+Console.WriteLine("Введите первое число");
 string numberA = Console.ReadLine();
 int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
+Console.WriteLine("Введите второе число");
 string numberB = Console.ReadLine();
 int b = int.Parse(numberB);
+Console.WriteLine("Введите третье число");
+string numberC = Console.ReadLine();
+int c = int.Parse(numberC);
 int max = 0;
-int min = 0;
 if (a>b) 
 {
     max = a;
-    min = b;
 }
 else
 {
     max = b;
-    min = a;
+};
+if (c>max)
+{
+    max=c;
 }
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
+Console.WriteLine($"Максимальное число {max}");
