@@ -1,20 +1,28 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+Console.WriteLine("Введите чиcло");
+int N = int.Parse(Console.ReadLine() ?? "");
+if (N>0) 
 {
-    max = a;
-    min = b;
+   int k=1;
+    while (k<=N)
+    {
+        if(k%2==0)
+        {
+            Console.Write($"{k} ");
+        }
+        k++;
+    }
 }
 else
 {
-    max = b;
-    min = a;
+   int k=1;
+    while (k>=N)
+    {
+        if(k%2==0)
+        {
+            Console.Write($"{k} ");
+        }
+        k--;
+    }
 }
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
+
