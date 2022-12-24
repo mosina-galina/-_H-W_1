@@ -1,20 +1,19 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+Console.WriteLine("Введите цифру от 1 до 7 ");
+int N = int.Parse(Console.ReadLine() ?? "");
+if ((N>0)&&(N<8))
 {
-    max = a;
-    min = b;
+    if (N<6)
+    {
+        Console.WriteLine($"Не является выходным");
+    }
+    else
+    {
+        Console.WriteLine($"Выходной!");
+    }
 }
 else
 {
-    max = b;
-    min = a;
+    Console.WriteLine($"Не является днем недели");
+
 }
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
