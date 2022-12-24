@@ -1,20 +1,19 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+Console.WriteLine("Введите чиcло");
+string num = (Console.ReadLine() ?? "");
+int n = num.Length;
+if (n<3)
 {
-    max = a;
-    min = b;
+    Console.WriteLine($"Третей цифры нет");
 }
-else
+else    
 {
-    max = b;
-    min = a;
+    int a = int.Parse(num);
+    int c = 1;
+    for (int i = n; i>3; i--)
+        {
+            c=c*10;
+        }
+    int b = (a/c)%10;
+    Console.WriteLine($"Третья цифра числа {a} = {b}");
 }
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
