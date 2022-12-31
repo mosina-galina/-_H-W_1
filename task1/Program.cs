@@ -1,20 +1,21 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+Console.WriteLine("Введите пятизначное число: ");
+string num = Console.ReadLine();
+int len = num.Length;
+
+if (len == 5)
 {
-    max = a;
-    min = b;
+    if (num[0] == num[4] && num[1] == num[3])
+    {
+        Console.WriteLine($" Число {num} является палиндром");
+    }
+    else
+    {
+        Console.WriteLine($"Число {num} не является палиндром");
+    }
 }
 else
 {
-    max = b;
-    min = a;
+    Console.WriteLine($"Число {num} не является пятизначным");
 }
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
+
