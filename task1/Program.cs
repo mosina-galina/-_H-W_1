@@ -1,20 +1,7 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
-{
-    max = a;
-    min = b;
+﻿//Задача 23 Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+Console.WriteLine("Введите число ");
+int N = int.Parse(Console.ReadLine() ?? "");
+for (int i = 1; i <= N; i++)
+{ 
+    Console.Write($"{i*i*i} ");
 }
-else
-{
-    max = b;
-    min = a;
-}
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
