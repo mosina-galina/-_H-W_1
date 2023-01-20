@@ -1,20 +1,17 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+Console.WriteLine("Введите первое число ");
+int A = int.Parse(Console.ReadLine() ?? "");
+Console.WriteLine("Введите второе число ");
+int B = int.Parse(Console.ReadLine() ?? "");
+void degree (int a, int b)
 {
-    max = a;
-    min = b;
+    int result = 1;
+    for (int i = 1; i <= b; i++)
+    {
+        result =  result * a;
+    
+    }
+    Console.WriteLine($"{A} в степени {B} = {result}");
 }
-else
-{
-    max = b;
-    min = a;
-}
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
+degree(A,B);
