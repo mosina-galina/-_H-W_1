@@ -1,20 +1,8 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+int len = 8;
+int[] array = new int[len];
+for (int i = 0; i < len; i++)
 {
-    max = a;
-    min = b;
+    array[i] = new Random().Next(1,9);
+    Console.Write($"{array[i]} ");
 }
-else
-{
-    max = b;
-    min = a;
-}
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
