@@ -1,20 +1,17 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+Console.WriteLine("Введите число ");
+string num = (Console.ReadLine() ?? "");
+int len = num.Length;
+int n = int.Parse(num);
+void sum(int n, int len)
 {
-    max = a;
-    min = b;
+    int plus = 0;
+    for (int i = 0; i < len; i++)
+    {
+        plus = plus + n%10;
+        n = n/10;
+    }
+    Console.WriteLine($"Сумма цифр в числе {num} = {plus}");
 }
-else
-{
-    max = b;
-    min = a;
-}
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
+sum(n,len);
+
