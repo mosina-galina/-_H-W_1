@@ -1,20 +1,15 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+Console.WriteLine("Введите длинну массива ");
+int n = int.Parse(Console.ReadLine() ?? "");
+int[] array = new int[n];
+for (int i = 0; i < n; i++)
 {
-    max = a;
-    min = b;
+    array[i] = new Random().Next(100,1000);
+    Console.Write($"{array[i]} ");
 }
-else
+int p = 0;
+for (int k = 0; k < n; k++)
 {
-    max = b;
-    min = a;
+    if (array[k]%2 == 0) p++;
 }
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
+Console.Write($"чётных - {p}");
