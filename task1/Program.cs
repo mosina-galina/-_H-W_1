@@ -1,20 +1,15 @@
-﻿//Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-Console.WriteLine("Введите первое чило");
-string numberA = Console.ReadLine();
-int a = int.Parse(numberA);
-Console.WriteLine("Введите второе чило");
-string numberB = Console.ReadLine();
-int b = int.Parse(numberB);
-int max = 0;
-int min = 0;
-if (a>b) 
+﻿//Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+Console.WriteLine("Введите длинну массива ");
+int n = int.Parse(Console.ReadLine() ?? "");
+int[] array = new int[n];
+for (int i = 0; i < n; i++)
 {
-    max = a;
-    min = b;
+     array[i] = new Random().Next(1,1000);
+    Console.Write($"{array[i]} ");
 }
-else
+int p = 0;
+for (int k = 0; k < n; k++)
 {
-    max = b;
-    min = a;
+     if (k%2! == 0) p=p+array[k];
 }
-Console.WriteLine($"Большее число {max}, а меньшее {min}");
+Console.Write($" сумма - {p}");
